@@ -16,14 +16,19 @@ https://github.com/duxlong/api-ping
 
 ## Docker hub
 
-
+https://hub.docker.com/r/duxlong/api-ping
 
 ## Usage
 
 docker pull
 ```
+docker pull duxlong/api-ping:latest
 ```
 
 docker run
 ```
+docker run -d \
+  -p 8005:5000 \
+  --name=api-ping \
+  duxlong/api-ping
 ```
