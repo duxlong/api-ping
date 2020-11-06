@@ -10,7 +10,10 @@ def ping():
     # ping host
     res = os.system('ping -c 1 -W 1 %s' % host)
 
-    return 'off' if bool(res) else 'on'
+    if host:
+        return 'off' if bool(res) else 'on'
+    
+    return 'Error Request !'
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=5000)
